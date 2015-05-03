@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Dynamic Test View Controller-->
+        <scene sceneID="aah-JU-0Lc">
+            <objects>
+                <viewController id="I57-xC-uXs" customClass="DynamicTestViewController" customModule="Breakout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fRT-oX-YHD"/>
+                        <viewControllerLayoutGuide type="bottom" id="5GZ-5c-KQ0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ir-Zp-Z4U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQg-YW-F6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Breakout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJN-10-WGs">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cJN-10-WGs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NyP-nm-m15"/>
+                            <constraint firstAttribute="trailing" secondItem="cJN-10-WGs" secondAttribute="trailing" id="c2U-Jx-hy7"/>
+                            <constraint firstItem="cJN-10-WGs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t7a-O4-MfQ"/>
+                            <constraint firstItem="cJN-10-WGs" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="zc4-Px-DEW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tkS-fA-LX5">
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="yYm-Lk-nKo">
+                            <connections>
+                                <action selector="reset:" destination="BYZ-38-t0r" id="OMf-5x-mmE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gameView" destination="cJN-10-WGs" id="9zy-fG-doI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="375"/>
+        </scene>
+    </scenes>
+</document>
